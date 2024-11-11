@@ -1,0 +1,318 @@
+/* General styles */
+body {
+    background-color: #a9ff2c;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styles */
+  .nav {
+    background-color: #141414;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .nav-link {
+    color: #a9ff2c; /* Dark link color */
+    font-weight: 800;   
+  }
+  
+  .nav-link:hover {
+    color: #fff !important;
+  }
+  
+  /* Hero section styling */
+  /* Hero section styling with background image */
+  .new-arrival-hero {
+      background: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), 
+                  url('img/hero-bg.jpg') no-repeat center center/cover; 
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      background-attachment: fixed;
+  }
+  
+  /* Breadcrumb container styling */
+  .breadcrumb-container {
+      background-color: rgba(255, 255, 255, 0.1); /* Slight transparency for breadcrumb box */
+      padding: 15px 30px;
+      border-radius: 5px;
+  }
+  
+  .breadcrumb-container p {
+      color: #fff; /* White text color */
+      font-size: 1.5rem; /* Font size for breadcrumb */
+      margin: 0;
+      font-weight: 800;
+      
+  }
+  
+  .breadcrumb-container a {
+      color: #a9ff2c; /* Accent color for link */
+      text-decoration: none;
+      font-weight: 800;
+  }
+  
+  .breadcrumb-container a:hover {
+      text-decoration: underline;
+  }
+  
+  /* Adjustments for mobile screens */
+  @media (max-width: 768px) {
+      .breadcrumb-container p {
+          font-size: 1.2rem; /* Smaller font size on mobile */
+      }
+  }
+  
+  /* Product categories section */
+  .product-categories {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #a9ff2c;
+  }
+  
+  .product-categories .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+  }
+  
+  .categories-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .category-item {
+    width: 30%;
+    margin: 15px 0;
+    padding: 20px;
+    background-color: #333333;
+  
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .category-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .category-link {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #a9ff2c;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  
+  .category-link:hover {
+    color: #a9ff2c; /* Accent color */
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      flex: 1 1 calc(50% - 20px); /* On smaller screens, two cards fit in a row */
+    }
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #a9ff2c;
+}
+.product-cards{
+    background-color: #a9ff2c;
+}
+.product-cards h1{
+  font-weight: 800;
+  text-align: center;
+  background-color: #333333;
+  color: #a9ff2c;
+}
+.card {
+  background-color: #333333 !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #ffffff; /* Updated for better contrast on dark background */
+}
+
+.card-description {
+  font-size: 0.9em;
+  color: #cccccc; /* Updated for better contrast on dark background */
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/*faq section*/
+.faq-section {
+  padding: 50px 20px;
+  background-color: #a9ff2c;
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+.faq {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 15px;
+  color: #a9ff2c;
+  font-family: 'Arial', sans-serif;
+  background-color: #333333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.question h3{
+  font-weight: 800;
+  font-size: 18px;
+}
+.question:hover {
+  background-color: #a9ff2c;
+color: #333;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  color: #333333;
+  background-color: #a9ff2c;
+  font-family: 'Arial', sans-serif;
+  transition: max-height 0.3s ease;
+}
+.answer p {
+  padding: 10px 0;
+  font-weight: 800;
+}
+
+.toggle-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+  
+  /* Footer section */
+.site-footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    width: 30%;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #a9ff2c; /* Accent color */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center; 
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    margin: 0 10px;
+  }
+  
+  .social-links li a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .social-links li a:hover {
+    color: #a9ff2c; /* Accent color */
+  }

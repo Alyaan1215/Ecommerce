@@ -1,0 +1,397 @@
+/* General styles */
+body {
+  background-color: #a9ff2c;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.nav {
+  background-color: #141414;
+  transition: background-color 0.3s ease;
+  
+}
+
+.nav-link {
+  color: #a9ff2c; /* Dark link color */
+  font-weight: 800;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+/* Hero section styles */
+/* Hero section styles */
+.hero-section {
+  position: relative; /* Make section relative for absolute positioning */
+  background: url('img/banner.webp') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Dimming overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dim the background */
+  z-index: 1; /* Ensure overlay is behind the content */
+}
+
+/* Hero content */
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2; /* Ensure content is on top of overlay */
+  color: #fff;
+  padding: 30px;
+}
+
+/* Hero heading */
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff; /* Keep the text bright */
+}
+
+/* Hero paragraph */
+.hero-section p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #fff; /* Keep the text bright */
+}
+
+/* CTA Button styles */
+.hero-section .cta-button {
+  padding: 15px 30px;
+  background-color: #ff6347; /* CTA button color */
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .cta-button:hover {
+  background-color: #e5533c; /* Darker hover color */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+/* Product categories section */
+.product-categories {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #a9ff2c;
+}
+
+.product-categories .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  width: 30%;
+  margin: 15px 0;
+  padding: 20px;
+  background-color: #333333;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.category-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.category-link {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a9ff2c;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.category-link:hover {
+  color: #a9ff2c; /* Accent color */
+}
+/* Featured products section */
+.featured-products {
+  padding: 50px 0;
+  background-color: #a9ff2c;
+  text-align: center;
+}
+
+.featured-products .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 22%;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #a9ff2c;
+  font-weight: 800;
+}
+
+.product-item p {
+  font-size: 1.2rem;
+  color: #a9ff2c;
+  margin-bottom: 15px;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: #a9ff2c; /* Accent color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #a9ff2c;
+}
+/* Newsletter signup section */
+.newsletter-signup {
+  padding: 50px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.newsletter-signup h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-signup form {
+  margin-top: 20px;
+}
+
+.newsletter-signup input[type="email"] {
+  padding: 10px;
+  width: 40%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.newsletter-signup button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.newsletter-signup button:hover {
+  background-color: #e5533c;
+}
+/* Testimonials section */
+.testimonials {
+  padding: 50px 0;
+  background-color: #a9ff2c;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.testimonial-carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-item {
+  width: 30%;
+  margin: 0 15px;
+  padding: 20px;
+  background-color: #599400;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.testimonial-item span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* Footer section */
+.site-footer {
+  background-color: #333333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #a9ff2c; /* Accent color */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #222;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links li a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.social-links li a:hover {
+  color: #a9ff2c; /* Accent color */
+}
+/* Make everything responsive */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .categories-grid {
+    flex-direction: column;
+  }
+
+  .category-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .product-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-signup input[type="email"] {
+    width: 80%;
+  }
+}

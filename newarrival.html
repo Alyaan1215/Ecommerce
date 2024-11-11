@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Arrival</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+/* General styles */
+body {
+  background-color: #a9ff2c;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.nav {
+  background-color: #141414;
+  transition: background-color 0.3s ease;
+  
+}
+
+.nav-link {
+  color: #a9ff2c; /* Dark link color */
+  font-weight: 800;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+/* Hero section styling */
+/* Hero section styling */
+  /* Hero section styling with background image */
+  .new-arrival-hero {
+      background: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), 
+                  url('img/hero-bg.jpg') no-repeat center center/cover; 
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      background-attachment: fixed;
+  }
+  
+  /* Breadcrumb container styling */
+  .breadcrumb-container {
+      background-color: rgba(255, 255, 255, 0.1); /* Slight transparency for breadcrumb box */
+      padding: 15px 30px;
+      border-radius: 5px;
+  }
+  
+  .breadcrumb-container p {
+      color: #fff; /* White text color */
+      font-size: 1.5rem; /* Font size for breadcrumb */
+      margin: 0;
+      font-weight: 800;
+      
+  }
+  
+  .breadcrumb-container a {
+      color: #a9ff2c; /* Accent color for link */
+      text-decoration: none;
+      font-weight: 800;
+  }
+  
+  .breadcrumb-container a:hover {
+      text-decoration: underline;
+  }
+  
+  /* Adjustments for mobile screens */
+  @media (max-width: 768px) {
+      .breadcrumb-container p {
+          font-size: 1.2rem; /* Smaller font size on mobile */
+      }
+  }
+
+/* Product categories section */
+.product-categories {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #a9ff2c;
+}
+
+.product-categories .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  width: 30%;
+  margin: 15px 0;
+  padding: 20px;
+  background-color: #333333;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.category-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.category-link {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a9ff2c;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.category-link:hover {
+  color: #a9ff2c; /* Accent color */
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    flex: 1 1 calc(50% - 20px); /* On smaller screens, two cards fit in a row */
+  }
+}
+
+
+.promo-banner {
+  background-color: #ff6347;
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.promo-banner h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.promo-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.promo-banner .btn {
+  background-color: #141414;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.promo-banner .btn:hover {
+  background-color: #222;
+}
+
+.categories-section {
+  background-color: #141414;
+  padding: 60px 0;
+}
+
+.categories-section h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.category-tile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.category-tile img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.category-tile h3 {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.category-tile .btn {
+  background-color: #a9ff2c;
+  color: #141414;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.category-tile .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.testimonials {
+  background-color: #222;
+  padding: 60px 0;
+}
+
+.testimonials h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimonial {
+  text-align: center;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial h5 {
+  color: #a9ff2c;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .product-card {
+    flex: 1 1 calc(50% - 20px); /* Adjust card width for tablet and mobile */
+  }
+  .new-arrivals .product-card {
+    margin-bottom: 20px;
+  }
+
+  .promo-banner h2 {
+    font-size: 2rem;
+  }
+
+  .categories-section h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    padding: 20px;
+  }
+}
+
+
+/* Footer section */
+.site-footer {
+  background-color: #333333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #a9ff2c; /* Accent color */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #222;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links li a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.social-links li a:hover {
+  color: #a9ff2c; /* Accent color */
+}
+</style>
+<body>
+    <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-sm nav"> <!-- Ensure "nav" class is added -->
+    <a class="navbar-brand" href="index.html">
+      <img src="img/alyaan logo 1.jpg" alt="logo" style="width:40px;">
+    </a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="newarrival.html">New Arrival</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Men</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Women</a>
+      </li>
+      <li class="nav-item">
+        <form class="search-bar">
+          <input type="text" placeholder="Search for products...">
+          <button type="submit">Search</button>
+      </form>
+      
+      </li>
+    </ul>
+  </nav>
+
+ <!-- Hero Section -->
+ <section class="new-arrival-hero">
+  <div class="breadcrumb-container">
+      <p><a href="#">Home</a> &gt;<a href="newarrival.html">New Arrival</a> </p>
+  </div>
+</section>
+
+<section class="product-categories">
+  <h2 class="section-title">Shop by Category</h2>
+  <div class="categories-grid">
+      <div class="category-item">
+          <img src="img/accessories.webp" alt="Men's Fashion">
+          <a href="mens.html" class="category-link">Men</a>
+      </div>
+      <div class="category-item">
+          <img src="img/laptop.webp" alt="Women's Fashion">
+          <a href="women.html" class="category-link">Women</a>
+      </div>
+      <div class="category-item">
+          <img src="img/airpods.webp" alt="Accessories">
+          <a href="newarrival.html" class="category-link">Accessories</a>
+      </div>
+  </div>
+</section>
+<!--Featured Product-->
+
+<section class="promo-banner">
+  <div class="container text-center">
+    <h2>Get 20% Off on Your First Purchase</h2>
+    <p>Use code: WELCOME20 at checkout</p>
+    <button class="btn btn-success">Shop Now</button>
+  </div>
+</section>
+
+<section class="categories-section">
+  <div class="container">
+    <h2>Shop by Category</h2>
+    <div class="row">
+      <!-- Category 1 -->
+      <div class="col-md-3">
+        <div class="category-tile">
+          <img src="img/laptop.webp" alt="Men">
+          <h3>Men</h3>
+          <a href="#" class="btn btn-dark">Shop Men</a>
+        </div>
+      </div>
+      <!-- Repeat for other categories -->  
+      <div class="col-md-3">
+        <div class="category-tile">
+          <img src="img/laptop.webp" alt="Men">
+          <h3>Men</h3>
+          <a href="#" class="btn btn-dark">Shop Men</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-tile">
+          <img src="img/laptop.webp" alt="Men">
+          <h3>Men</h3>
+          <a href="#" class="btn btn-dark">Shop Men</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!--Footer Section-->
+<footer class="site-footer">
+    <div class="footer-links">
+        <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+      // JavaScript for search functionality
+document.getElementById('searchForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+
+    const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+    const items = document.querySelectorAll('.product-card'); // Assuming product cards are elements you want to search through
+
+    items.forEach(item => {
+        const itemName = item.querySelector('h3').textContent.toLowerCase(); // Adjust selector if needed
+        if (itemName.includes(searchQuery)) {
+            item.style.display = 'block'; // Show matching items
+        } else {
+            item.style.display = 'none'; // Hide non-matching items
+        }
+    });
+});
+  </script>
+</body>
+</html>
